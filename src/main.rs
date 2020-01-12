@@ -9,7 +9,7 @@ fn main() {
     env_logger::init().unwrap();
     let mountpoint = env::args_os().nth(1).unwrap();
 
-    let storage = auth::authenticate("".to_string(), "".to_string());
+    let storage = auth::authenticate("", "");
 
     let bg_session = filesystem::mount(&mountpoint, storage);
 
